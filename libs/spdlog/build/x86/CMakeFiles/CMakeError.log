@@ -1,0 +1,79 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d8541/fast && /usr/bin/make  -f CMakeFiles/cmTC_d8541.dir/build.make CMakeFiles/cmTC_d8541.dir/build
+make[1]: вход в каталог «/home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_d8541.dir/src.cxx.o
+/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=i686-none-linux-android16 --sysroot=/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -DSPDLOG_COMPILED_LIB  -O2 -g -DNDEBUG -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_d8541.dir/src.cxx.o -MF CMakeFiles/cmTC_d8541.dir/src.cxx.o.d -o CMakeFiles/cmTC_d8541.dir/src.cxx.o -c /home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp/src.cxx
+/home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp/src.cxx:13:3: error: use of undeclared identifier 'pthread_cancel'
+  pthread_cancel(thread);
+  ^
+1 error generated.
+CMakeFiles/cmTC_d8541.dir/build.make:78: recipe for target 'CMakeFiles/cmTC_d8541.dir/src.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_d8541.dir/src.cxx.o] Error 1
+make[1]: выход из каталога «/home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp»
+Makefile:127: recipe for target 'cmTC_d8541/fast' failed
+make: *** [cmTC_d8541/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2346b/fast && /usr/bin/make  -f CMakeFiles/cmTC_2346b.dir/build.make CMakeFiles/cmTC_2346b.dir/build
+make[1]: вход в каталог «/home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_2346b.dir/CheckFunctionExists.cxx.o
+/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=i686-none-linux-android16 --sysroot=/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_2346b.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_2346b.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_2346b.dir/CheckFunctionExists.cxx.o -c /home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_2346b
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2346b.dir/link.txt --verbose=1
+/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=i686-none-linux-android16 --sysroot=/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections  CMakeFiles/cmTC_2346b.dir/CheckFunctionExists.cxx.o -o cmTC_2346b  -lpthreads  -static-libstdc++ -latomic -lm 
+ld: error: unable to find library -lpthreads
+clang-12: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_2346b.dir/build.make:99: recipe for target 'cmTC_2346b' failed
+make[1]: *** [cmTC_2346b] Error 1
+make[1]: выход из каталога «/home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp»
+Makefile:127: recipe for target 'cmTC_2346b/fast' failed
+make: *** [cmTC_2346b/fast] Error 2
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: /home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_8d95d/fast && /usr/bin/make  -f CMakeFiles/cmTC_8d95d.dir/build.make CMakeFiles/cmTC_8d95d.dir/build
+make[1]: вход в каталог «/home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp»
+Building CXX object CMakeFiles/cmTC_8d95d.dir/CheckFunctionExists.cxx.o
+/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=i686-none-linux-android16 --sysroot=/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot   -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_8d95d.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_8d95d.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_8d95d.dir/CheckFunctionExists.cxx.o -c /home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_8d95d
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8d95d.dir/link.txt --verbose=1
+/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/bin/clang++ --target=i686-none-linux-android16 --sysroot=/home/aleksandr/Android/Sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/linux-x86_64/sysroot -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections  CMakeFiles/cmTC_8d95d.dir/CheckFunctionExists.cxx.o -o cmTC_8d95d  -lpthread  -static-libstdc++ -latomic -lm 
+ld: error: unable to find library -lpthread
+clang-12: error: linker command failed with exit code 1 (use -v to see invocation)
+CMakeFiles/cmTC_8d95d.dir/build.make:99: recipe for target 'cmTC_8d95d' failed
+make[1]: *** [cmTC_8d95d] Error 1
+make[1]: выход из каталога «/home/aleksandr/AndroidStudioProjects/libs/spdlog/build/x86/CMakeFiles/CMakeTmp»
+Makefile:127: recipe for target 'cmTC_8d95d/fast' failed
+make: *** [cmTC_8d95d/fast] Error 2
+
+
+

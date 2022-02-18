@@ -1,0 +1,13 @@
+# ninja log v5
+0	3468	1645087706	CMakeFiles/native-lib.dir/native-lib.cpp.o	eab4df5b71349cfd
+3468	3567	1645087706	/home/aleksandr/AndroidStudioProjects/gaplikov_fclient/app/build/intermediates/cxx/Debug/3ga111p5/obj/x86/libnative-lib.so	a8f36f9d446afc85
+1	3496	1645090880	CMakeFiles/native-lib.dir/native-lib.cpp.o	eab4df5b71349cfd
+3496	3597	1645090880	/home/aleksandr/AndroidStudioProjects/gaplikov_fclient/app/build/intermediates/cxx/Debug/3ga111p5/obj/x86/libnative-lib.so	a8f36f9d446afc85
+1	3507	1645091830	CMakeFiles/native-lib.dir/native-lib.cpp.o	eab4df5b71349cfd
+3507	3607	1645091830	/home/aleksandr/AndroidStudioProjects/gaplikov_fclient/app/build/intermediates/cxx/Debug/3ga111p5/obj/x86/libnative-lib.so	a8f36f9d446afc85
+1	3181	1645091856	CMakeFiles/native-lib.dir/native-lib.cpp.o	eab4df5b71349cfd
+3181	3277	1645091857	/home/aleksandr/AndroidStudioProjects/gaplikov_fclient/app/build/intermediates/cxx/Debug/3ga111p5/obj/x86/libnative-lib.so	a8f36f9d446afc85
+1	4826	1645132895	CMakeFiles/native-lib.dir/native-lib.cpp.o	181034dd9d6cd58c
+4826	4997	1645132895	/home/aleksandr/AndroidStudioProjects/gaplikov_fclient/app/build/intermediates/cxx/Debug/3ga111p5/obj/x86/libnative-lib.so	24adfd23cca65d3d
+1	4547	1645133740	CMakeFiles/native-lib.dir/native-lib.cpp.o	181034dd9d6cd58c
+4548	4660	1645133741	/home/aleksandr/AndroidStudioProjects/gaplikov_fclient/app/build/intermediates/cxx/Debug/3ga111p5/obj/x86/libnative-lib.so	24adfd23cca65d3d
