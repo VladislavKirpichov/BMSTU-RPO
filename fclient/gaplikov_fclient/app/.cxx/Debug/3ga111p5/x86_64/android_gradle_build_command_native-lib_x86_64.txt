@@ -1,0 +1,7 @@
+Executable : /home/aleksandr/Android/Sdk/cmake/3.18.1/bin/ninja
+arguments : 
+-C
+/home/aleksandr/AndroidStudioProjects/gaplikov_fclient/app/.cxx/Debug/3ga111p5/x86_64
+native-lib
+jvmArgs : 
+
