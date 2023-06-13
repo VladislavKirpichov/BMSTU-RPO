@@ -3,23 +3,27 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    namespace 'ru.iu3.fclient'
+    compileSdk 33
 
     defaultConfig {
-        applicationId "ru.igap.gaplikov_fclient"
-        minSdk 21
-        targetSdk 32
+        applicationId "ru.iu3.fclient"
+        minSdk 24
+        targetSdk 33
         versionCode 1
         versionName "1.0"
+        sourceSets.main {
+            jni.srcDirs = []
+        }
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                cppFlags ''
+                cppFlags ""
             }
         }
         ndk {
-            abiFilters "x86", "x86_64"
+            abiFilters "arm64-v8a", "armeabi-v7a", "x86"
         }
     }
 
@@ -36,19 +40,21 @@ android {
     externalNativeBuild {
         cmake {
             path file('src/main/cpp/CMakeLists.txt')
-            version '3.18.1'
+            version '3.22.1'
         }
     }
     buildFeatures {
         viewBinding true
     }
+    buildToolsVersion '33.0.2'
+    ndkVersion '25.2.9519653'
 }
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.3.1'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
